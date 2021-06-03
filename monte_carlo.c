@@ -46,13 +46,15 @@ float mc_pi(int n){
     x=frandom();
     y=frandom();
     z=(x*x) + (y*y);
-    if( z < 1)
+    if( z < 1){
       c++;
+    }
     else
+    {
       s++;
+    }
   }
-  s=s+c;
-  pi= 4 * (float)c/s;
+  pi= 4 *( (float)c/(c+s));
   return pi;
 }
   
